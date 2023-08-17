@@ -2,14 +2,21 @@ const Data = require('../models/Data');
 
 exports.getData = async (req, res) => {
     try {
-        const data = await Data.find(); // You can add filters here if needed
+        const filters = req.query;
+        const filterObject = {};
+        for (const key in filters) {
+            if (filters.hasOwnProperty(key)) {
+                filterObject[key] = filters[key];
+            }
+        }
+
+        const data = await Data.find(filterObject);
         res.json(data);
     } catch (error) {
         console.error(error);
         res.status(500).json({ message: 'Server error' });
     }
 };
-
 
 exports.addData = async (req, res) => {
     try {
