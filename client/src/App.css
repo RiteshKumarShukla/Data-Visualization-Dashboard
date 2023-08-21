@@ -1,14 +1,66 @@
-/* src/App.css */
-.app {
-  text-align: center;
-  margin-top: 20px;
+/* App.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
 }
 
-.filter-form {
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
   margin-bottom: 20px;
 }
 
-.data-visualization {
-  width: 80%;
-  margin: 0 auto;
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+}
+
+.data-table th,
+.data-table td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.data-table th {
+  background-color: #3498db;
+  color: white;
+}
+
+.data-table tr:nth-child(even) {
+  background-color: #f0f0f0;
+}
+
+.data-table tr:hover {
+  background-color: #e0e0e0;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin-top: 20px;
+}
+
+.page-item {
+  margin: 0 5px;
+}
+
+.page-link {
+  color: #3498db;
+  border: 1px solid #3498db;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: white;
+}
+
+.page-link:hover {
+  background-color: #3498db;
+  color: white;
 }

@@ -1,43 +1,30 @@
-// src/App.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
-import FilterForm from './components/FilterForm';
-import DataVisualization from './components/DataVisualization';
+import { ChakraProvider } from '@chakra-ui/react'
+import LoginPage from './components/Login/Login';
 
 function App() {
   const [data, setData] = useState([]);
-  const [filteredData, setFilteredData] = useState([]);
 
   useEffect(() => {
-    fetchData();
+    const fetchDataFromApi = async () => {
+      const API_URL = 'http://localhost:5000';
+      try {
+        const response = await axios.get(`${API_URL}/api/data`);
+        setData(response.data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchDataFromApi();
   }, []);
 
-  const fetchData = async () => {
-    try {
-      const response = await axios.get('http://localhost:5000/api/data');
-      setData(response.data);
-      setFilteredData(response.data);
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
-  const handleFilterChange = async (filters) => {
-    try {
-      const response = await axios.get('http://localhost:5000/api/data', { params: filters });
-      setFilteredData(response.data);
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
   return (
-    <div className="app">
-      <h1>Data Visualization Dashboard</h1>
-      <FilterForm onFilterChange={handleFilterChange} />
-      <DataVisualization data={filteredData} />
-    </div>
+    <ChakraProvider>
+      <LoginPage />
+    </ChakraProvider>
   );
 }
 
