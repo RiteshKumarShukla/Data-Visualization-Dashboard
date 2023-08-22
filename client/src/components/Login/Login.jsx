@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Box,
   Container,
@@ -6,20 +6,24 @@ import {
   FormLabel,
   Input,
   Button,
-  useToast,
+  AlertDialog,
+  AlertDialogBody,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogContent,
+  AlertDialogOverlay,
 } from '@chakra-ui/react';
 
 const LoginPage = () => {
-  const toast = useToast();
+  const [isOpen, setIsOpen] = useState(false);
 
-  const handleLogin = () => {
-    // will implement  actual login logic here
-    toast({
-      title: 'Redirecting to Dashboard',
-      status: 'success',
-      duration: 10000,
-      isClosable: true,
-    });
+  const handleLogin = (event) => {
+    event.preventDefault();
+    setIsOpen(true);
+    setTimeout(() => {
+      setIsOpen(false);
+      window.location.href = '/dashboard';
+    }, 2000);
   };
 
   return (
@@ -39,7 +43,7 @@ const LoginPage = () => {
         textAlign="center"
       >
         <h1 style={{ color: 'white' }}>Welcome Admin !!!</h1>
-        <form onSubmit={handleLogin}>
+        <form>
           <FormControl>
             <FormLabel style={{ color: 'white' }}>Admin Email</FormLabel>
             <Input
@@ -60,9 +64,23 @@ const LoginPage = () => {
               disabled
             />
           </FormControl>
-          <Button colorScheme="green" mt={6} type="submit" w="100%">
+          <Button colorScheme="green" mt={6} w="100%" onClick={handleLogin}>
             Login
           </Button>
+          {/* AlertDialog */}
+          <AlertDialog isOpen={isOpen} leastDestructiveRef={undefined}>
+            <AlertDialogOverlay>
+              <AlertDialogContent bg="purple.800" color="white">
+                <AlertDialogHeader>Welcome Admin !!!</AlertDialogHeader>
+                <AlertDialogBody>
+                  Redirecting to the dashboard page...
+                </AlertDialogBody>
+                <AlertDialogFooter>
+                  <Button onClick={() => setIsOpen(false)}>Cancel</Button>
+                </AlertDialogFooter>
+              </AlertDialogContent>
+            </AlertDialogOverlay>
+          </AlertDialog>
         </form>
       </Container>
     </Box>
