@@ -2,15 +2,15 @@ const Data = require('../models/Data');
 
 exports.getData = async (req, res) => {
     try {
-        const filters = req.query;
-        const filterObject = {};
-        for (const key in filters) {
-            if (filters.hasOwnProperty(key)) {
-                filterObject[key] = filters[key];
-            }
-        }
+        // const filters = req.query;
+        // const filterObject = {};
+        // for (const key in filters) {
+        //     if (filters.hasOwnProperty(key)) {
+        //         filterObject[key] = filters[key];
+        //     }
+        // }
 
-        const data = await Data.find(filterObject);
+        const data = await Data.find({}).limit(30);
         res.json(data);
     } catch (error) {
         console.error(error);
