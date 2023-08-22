@@ -35,7 +35,7 @@ const LoginPage = () => {
         borderWidth={1}
         borderRadius="lg"
         boxShadow="lg"
-        borderColor="white" // Set the border color to white
+        borderColor="white" 
         textAlign="center"
       >
         <h1 style={{ color: 'white' }}>Welcome Admin !!!</h1>
@@ -46,7 +46,7 @@ const LoginPage = () => {
               type="text"
               placeholder="Enter your username"
               value="admin@gmail.com"
-              borderColor="white" // Set the border color to white
+              borderColor="white" 
               disabled
             />
           </FormControl>
@@ -56,7 +56,7 @@ const LoginPage = () => {
               type="password"
               placeholder="Enter your password"
               value="admin" 
-              borderColor="white" // Set the border color to white
+              borderColor="white"
               disabled
             />
           </FormControl>
