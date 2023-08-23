@@ -49,8 +49,8 @@ const LikelihoodRadarChart = ({ data }) => {
       shadow="md"
       pb={100}
       bg={useColorModeValue("white", "gray.800")}
-      maxHeight={700} // Adjust the maximum height as needed
-      overflow="hidden" // Hide overflow content
+      maxHeight={700} 
+      overflow="hidden" 
     >
       <Heading as="h2" mb={4} ml={6}>
         Likelihood Chart
