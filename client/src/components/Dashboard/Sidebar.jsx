@@ -15,8 +15,22 @@ import {
   Flex,
   Heading,
   Avatar,
+  List,
+  ListItem,
+  ListIcon,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { ChevronRightIcon, SettingsIcon } from "@chakra-ui/icons";
+import {
+  MdDashboard,
+  MdAssignment,
+  MdSettings,
+  MdExitToApp,
+  MdPeople,
+  MdCalendarToday,
+  MdInsertDriveFile,
+  MdAnalytics,
+} from "react-icons/md";
 
 const AdminDashboard = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -42,7 +56,10 @@ const AdminDashboard = () => {
 
       <Drawer placement="left" onClose={onClose} isOpen={isOpen}>
         <DrawerOverlay />
-        <DrawerContent>
+        <DrawerContent
+          bg={useColorModeValue("gray.100", "gray.800")}
+          color={useColorModeValue("gray.800", "white")}
+        >
           <DrawerHeader
             borderBottomWidth="1px"
             fontSize="xl"
@@ -55,24 +72,50 @@ const AdminDashboard = () => {
           </DrawerHeader>
           <DrawerBody>
             <Text fontSize="lg" mb={2} fontWeight="bold">
-              Filters
+              Menu
             </Text>
-            <Divider mb={4} />
-            <Box mb={4}>
-              <Text fontSize="md" mb={2}>
-                Select an Option:
-              </Text>
-              <Select
-                value={selectedOption}
-                onChange={handleOptionChange}
-                placeholder="Select an option"
-              >
-                <option value="option1">Option 1</option>
-                <option value="option2">Option 2</option>
-                <option value="option3">Option 3</option>
-              </Select>
-            </Box>
-            <Flex alignItems="center" mt={6}>
+            <Divider
+              mb={4}
+              borderColor={useColorModeValue("gray.300", "gray.600")}
+            />
+
+            <List spacing={3}>
+              {/* ... Your list items */}
+              <ListItem cursor="pointer">
+                <ListIcon as={MdDashboard} fontSize="xl" />
+                Dashboard
+              </ListItem>
+              <ListItem cursor="pointer">
+                <ListIcon as={MdAssignment} fontSize="xl" />
+                Tasks
+              </ListItem>
+              <ListItem cursor="pointer">
+                <ListIcon as={MdPeople} fontSize="xl" />
+                Users
+              </ListItem>
+              <ListItem cursor="pointer">
+                <ListIcon as={MdCalendarToday} fontSize="xl" />
+                Calendar
+              </ListItem>
+              <ListItem cursor="pointer">
+                <ListIcon as={MdInsertDriveFile} fontSize="xl" />
+                Files
+              </ListItem>
+              <ListItem cursor="pointer">
+                <ListIcon as={MdAnalytics} fontSize="xl" />
+                Analytics
+              </ListItem>
+              <ListItem cursor="pointer">
+                <ListIcon as={MdSettings} fontSize="xl" />
+                Settings
+              </ListItem>
+              <ListItem cursor="pointer" onClick={onClose}>
+                <ListIcon as={MdExitToApp} fontSize="xl" />
+                Logout
+              </ListItem>
+            </List>
+
+            <Flex alignItems="center" mt="140%">
               <Avatar
                 size="lg"
                 src="https://avatars.githubusercontent.com/u/110231091?s=400&u=dfefa66e38cbdd84674e1a9f55737a51827b8725&v=4"
@@ -80,7 +123,10 @@ const AdminDashboard = () => {
               />
               <Box>
                 <Heading size="md">Ritesh Kr. Shukla</Heading>
-                <Text fontSize="sm" color="gray.500">
+                <Text
+                  fontSize="sm"
+                  color={useColorModeValue("gray.500", "gray.400")}
+                >
                   Web Developer
                 </Text>
               </Box>
