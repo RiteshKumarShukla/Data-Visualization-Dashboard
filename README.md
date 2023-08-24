@@ -6,21 +6,28 @@ Welcome to the Data Visualization Dashboard repository! This dashboard provides 
 
 Here are some enticing snapshots showcasing the features and functionalities of our visualization dashboard:
 
-![Screenshot 1](https://github.com/RiteshKumarShukla/BlackCoffer-Visualization-Dashboard/assets/110231091/c30346ce-895b-411e-89d8-ad9de8a79424)
+![image](https://github.com/RiteshKumarShukla/Data-Visualization-Dashboard/assets/110231091/d30a8648-12d7-41b6-82c6-5ebec4c5268b)
 
-![Screenshot 2](https://github.com/RiteshKumarShukla/BlackCoffer-Visualization-Dashboard/assets/110231091/b2e0f540-778d-4cd7-b61a-f41af4653207)
 
-![Screenshot 3](https://github.com/RiteshKumarShukla/BlackCoffer-Visualization-Dashboard/assets/110231091/29b2076d-c415-46a0-9ee5-40b42bd9ae31)
+![image](https://github.com/RiteshKumarShukla/Data-Visualization-Dashboard/assets/110231091/66fc2062-e850-49c6-ad0c-147e7bd1877e)
 
-![Screenshot 4](https://github.com/RiteshKumarShukla/BlackCoffer-Visualization-Dashboard/assets/110231091/a7bc333b-7eee-442e-9a11-5625653b6d5a)
 
-![Screenshot 5](https://github.com/RiteshKumarShukla/BlackCoffer-Visualization-Dashboard/assets/110231091/ae887333-0fe1-4fc7-9e19-3b0ed73498a6)
+![image](https://github.com/RiteshKumarShukla/Data-Visualization-Dashboard/assets/110231091/448df45c-b92b-4faf-9784-1dd0c4706ffc)
 
-![Screenshot 6](https://github.com/RiteshKumarShukla/BlackCoffer-Visualization-Dashboard/assets/110231091/fab911ff-582c-4c0f-aabd-ef1f8b0eccd2)
 
-![Screenshot 7](https://github.com/RiteshKumarShukla/BlackCoffer-Visualization-Dashboard/assets/110231091/fd089a56-9996-4672-84ee-3109e3e036e8)
+![image](https://github.com/RiteshKumarShukla/Data-Visualization-Dashboard/assets/110231091/0c972e17-8b4f-407f-a3fd-38afeb352127)
 
-![Screenshot 8](https://github.com/RiteshKumarShukla/BlackCoffer-Visualization-Dashboard/assets/110231091/70a20df6-844b-4106-97b3-0ec7939e5423)
+
+![image](https://github.com/RiteshKumarShukla/Data-Visualization-Dashboard/assets/110231091/6e620052-f57f-4f93-957c-dc47a45eaedf)
+
+
+![image](https://github.com/RiteshKumarShukla/Data-Visualization-Dashboard/assets/110231091/6f1c69da-ebb0-4059-8614-57fcd818c568)
+
+
+![image](https://github.com/RiteshKumarShukla/Data-Visualization-Dashboard/assets/110231091/f5b957a0-f992-460e-b978-d511eaf488c6)
+
+
+![image](https://github.com/RiteshKumarShukla/Data-Visualization-Dashboard/assets/110231091/27afaa6b-a05f-48e4-9258-f8bcc4788071)
 
 ## About
 
